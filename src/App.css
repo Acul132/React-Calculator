@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 200 24px "SF Pro Text";
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: 100px repeat(5, 80px);
+  box-shadow: 0px 0px 20px 0px rgba(23, 23, 23, 0.221);
+}
+
+.calculator-output {
+  display: flex;
+  grid-column: 1 / -1;
+  background-color: rgb(52, 53, 55);
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: center ;
+  font-size: 50px;
+  border: 1px solid rgb(40, 40, 40);
+  white-space: nowrap; 
+  overflow: hidden;
+}
+
+.calculator-grid > button {
+  font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: none;
+  border-left: none;
+  border-top: 1px solid rgb(40, 40, 40);
+  cursor: pointer;
+  outline: none;
+  color: white;
+}
+
+.calculator-grid > button:hover{
+  opacity: 0.8;
+}
+
+.calculator-button-number {
+  border-right: 1px solid rgb(40, 40, 40);
+  background-color: rgb(97, 97, 101);
+}
+
+.calculator-button-operand {
+  background-color: rgb(242, 162, 60);
+}
+
+.calculator-button-special {
+  border-right: 1px solid rgb(40, 40, 40);
+  background-color: rgb(66, 66, 71);
+}
+
+.span-two {
+  grid-column: span 2;
+}
